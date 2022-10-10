@@ -10,6 +10,7 @@ Player* PlayerPtr = (Player*)0x8B94E0;
 //CraftInstance* CraftInstancePtr = *(CraftInstance**)0x9106A0; // Set this at runtime
 FlightGroupEntry* FlightGroupPtr = (FlightGroupEntry*)0x80DC80;
 CraftDefinition* CraftDefinitionPtr = (CraftDefinition*)0x5BB480;
+PilotData* PilotTableFrontEnd = (PilotData*)0xAE2A60;
 //QuickMissionData* QuickMissionDataPtr = *(QuickMissionData**)0x9EB8E0; // Set this at runtime
 
 
@@ -70,8 +71,10 @@ const auto MouseButton2Pressed = (int(*)())0x5581B0;
 const auto MouseButton1Released = (int(*)())0x5581D0;
 const auto MouseButton2Released = (int(*)())0x5581F0;
 const auto randXWA = (int(*)())0x59BEB0;
+const auto PlayWavFile = (int(*)(const char* filename, char* var2))0x5582E0;
+const auto GetTickCountXWA = (DWORD(*)())0x55ECE0;
 
-// In Flight Functions
+// In Flight Functions)
 const auto ReEnterHangar = (int(*)(unsigned __int16))0x457C20;
 const auto UpdateFGStatsOfRemovedObject = (char(*)(unsigned __int16 objectIndex, unsigned __int16 FGIndex, unsigned __int16))0x4D8140;
 const auto ResetUnknownPlayerPtr = (int(*)(Craft* craftPtr))0x41D3F0;
@@ -111,7 +114,7 @@ const auto missionDescriptionPtr = *(char **)0x9F4BD0;
 const auto missionLstPtr = (int *)0x9F4B98;
 const auto missionIndexLoaded = (int *)0x9F5E74;
 const auto missionSelectedOnLoadScrn = (int *)0x7830C0;
-const auto totalMissionsInLst = (int *)0x9F5EC0;
+const auto numberMissionEntriesInLST = (int *)0x9F5EC0;
 const auto missionDirectoryMissionSelected = (int *)0xAE2A8E;
 const auto missionDescriptionScrollPosition = (int *)0x7831B0;
 RECT* rectStandard3 = (RECT *)0x6031A8;
@@ -129,7 +132,7 @@ const auto FGCreationSpecies = (__int16*)0x9F4B82;
 const auto FGCreationNumCraft = (__int8*)0x9F4B8D;
 const auto FGCreationNumWaves = (__int8*)0x9F4B8C;
 const auto FGCreationPlayerInSlotTable = (int*)0x9F5EE0;
-const auto mainStringBuffer = (char(*)[])0xABD680;
+auto xwaTempString = (char*)0xABD680;
 const auto aSS_3 = (char*)0x603394;
 const auto skirmishConstStr = (char*)0x603174;
 const auto configGoalType = (__int8*)0xB0C8DE;
@@ -192,6 +195,7 @@ const auto localPlayerObjectIndex = (int*)0x634370;
 const auto configUpdateRate = (__int8*)0xB0C876;
 const auto latestNonInstantiatedRegion = (int*)0x80DB60;
 const auto ticksPerFrame = (int*)0x8C1640;
+const auto randomChanceToCallPAFunction = (int*)0x782FF0;
 
 // Unknown Globals
 

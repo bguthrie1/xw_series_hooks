@@ -363,7 +363,7 @@ enum MissionType : __int8
 	MissionType_Skirmish = 4,
 	MissionType_Deathstar = 5,
 	MissionType_Rebel = 6,
-	MissionType_Azzameen = 7,
+	MissionType_Family = 7,
 };
 
 

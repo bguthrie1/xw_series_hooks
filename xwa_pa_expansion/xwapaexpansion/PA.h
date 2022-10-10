@@ -1,3 +1,5 @@
 #pragma once
 
-int PAHook(int* params);
+void PlayPublicAnnouncement();
+int SetRandomChanceToCallPAFunction(int* params);
+int CheckToCallPAFunction(int* params);

@@ -2356,7 +2356,7 @@ struct MissionFlightGroup
 
 static_assert(sizeof(MissionFlightGroup) == 3646, "size of MissionFlightGroup must be 3646");
 
-struct QuickMissionData
+struct FrontEndMissionData
 {
 	MissionFlightGroup fg[192];
 	MissionMessage message[64];
@@ -2370,7 +2370,7 @@ struct QuickMissionData
 	BYTE empty1[557568];
 };
 
-static_assert(sizeof(QuickMissionData) == 1290432, "size of QuickMissionData must be 1290432");
+static_assert(sizeof(FrontEndMissionData) == 1290432, "size of QuickMissionData must be 1290432");
 
 struct T0x0AE2A60_1137E_0108
 {
@@ -2627,6 +2627,17 @@ struct PilotData
 };
 
 static_assert(sizeof(PilotData) == 152076, "size of PilotData must be 152076");
+
+
+struct MissionLSTEntry
+{
+	char missionFileName[64];
+	char missionTitle[128];
+	char MissionTitle[128];
+	__int32 IDNumber;
+	__int32 IsUnselectable;
+};
+
 
 #pragma pack(pop)
 
